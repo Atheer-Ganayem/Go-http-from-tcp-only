@@ -22,6 +22,7 @@ type RequestLine struct {
 
 
 func ReadRequestLine(reader *bufio.Reader) (RequestLine, error) {
+	return RequestLine{}, errors.New("test")
 	requestLine, err := reader.ReadString('\n')
 	if err != nil {
 		return RequestLine{}, err
