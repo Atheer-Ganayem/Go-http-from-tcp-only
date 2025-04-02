@@ -35,7 +35,7 @@ func handleRequest(conn net.Conn) {
 	
 	requestLine, err := utils.ReadRequestLine(reader)
 	if err != nil {
-		// errorRes(conn, "Error reading request line: " + err.Error())
+		errorRes(conn, "Error reading request line: " + err.Error())
 		return
 	}
 
